@@ -1,19 +1,22 @@
+<h1><%= @list.name %></h1>
+
 <table class="table">
   <thead>
     <tr>
       <th scope="col">ID</th>
-      <th scope="col">Name</th>
+      <th scope="col">Movie</th>
+      <th scope="col">Comment</th>
     </tr>
   </thead>
   <tbody>
-  <% @bookmar.each do |movie|%>
+  <% @bookmarks.each do |bookmark|%>
     <tr>
-      <th scope="row"> <%= movie.id %></th>
-      <td><%= movie.title %></td>
+      <th scope="row"> <%=bookmark.list_id%> </th>
+      <td><%= bookmark.movie.title %></td>
+      <td><%= bookmark.comment %></td>
     </tr>
   <% end %>
   </tbody>
 </table>
-<div>
-  <button class="btn"><%= link_to "Create a list", new_list_path %></button>
-</div>
+<%= link_to 'Crear bookmark', new_list_bookmark_path(@list) %>
+<%= link_to 'Volver', lists_path %>

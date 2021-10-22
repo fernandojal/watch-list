@@ -1,6 +1,7 @@
 <div class="mb-3">
-  <%=simple_form_for @list do |f|%>
-    <%= f.input :name, label: "Enter a name for the new list"%>
+  <%=simple_form_for [@list, @bookmark] do |f|%>
+    <%= f.input :comment, label: "Enter a comment"%>
+    <%= f.association :movie %>
     <%= f.submit "Submit list", class: "btn btn-primary" %>
   <% end %>
 </div>
