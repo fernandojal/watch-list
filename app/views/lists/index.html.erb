@@ -7,8 +7,8 @@
   <h2>Lista de generos</h2>
   <div class="row">
     <%@lists.each do |list|%>
-      <%= link_to list_path(list), class: "card" do %>
-        <div class="card-category col-md-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+      <%= link_to list_path(list) do %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(card.jpg)">
           <h2><%= list.name %></h2>
         </div>
       <% end %>
