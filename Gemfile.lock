@@ -222,7 +222,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   simple_form
   spring
-  turbolinks (~> 5)
+  turbolinks (~> 5.2.0)
   tzinfo-data
   web-console (>= 4.1.0)
   webpacker (~> 5.0)

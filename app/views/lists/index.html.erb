@@ -1,22 +1,17 @@
-
-<h1>Lista de generos</h1>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">ID</th>
-      <th scope="col">Name</th>
-    </tr>
-  </thead>
-  <tbody>
-  <%@lists.each do |list|%>
-    <tr>
-      <th scope="row"> <%=list.id%> </th>
-      <td><%= list.name %></td>
-      <td><button class="btn"><%= link_to "Show list", list_path(list) %></button></td>
-    </tr>
-  <% end %>
-  </tbody>
-</table>
-<div>
-  <button class="btn"><%= link_to "Create a list", new_list_path %></button>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(banner.jpg);">
+  <div class="container">
+    <h1>Las mejores peliculas a tu disposicion!</strong>!</h1>
+  </div>
+</div>
+<div class="container">
+  <h2>Lista de generos</h2>
+  <div class="row">
+    <%@lists.each do |list|%>
+      <%= link_to list_path(list), class: "card" do %>
+        <div class="card-category col-md-4" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+          <h2><%= list.name %></h2>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
